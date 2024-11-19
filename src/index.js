@@ -11,16 +11,16 @@ import App from "./App_star";
 // import App from "./App_currency_conversion";
 
 // use star rating outside of the component
-function Test() {
-  const[movieRating, setMovieRating] = useState(0);
-  return (
-    <div>
-      <App maxRating={10} size={30} color="blue" onSetRating= {setMovieRating} />
-      <p>This movie is rated {movieRating} stars</p>
-    </div>
-  );
+// function Test() {
+//   const[movieRating, setMovieRating] = useState(0);
+//   return (
+//     <div>
+//       <App maxRating={10} size={30} color="blue" onSetRating= {setMovieRating} />
+//       <p>This movie is rated {movieRating} stars</p>
+//     </div>
+//   );
 
-}
+// }
 
 
 
@@ -36,8 +36,9 @@ root.render(
       message={["Terrible", "Bad", "Okay", "Good", "Amazing"]}
       defaultRating={3}
     />
+    <App />
 
     {/* using outside of the component */}
-    <Test/>
+    {/* <Test /> */}
   </React.StrictMode>
 );

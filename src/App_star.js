@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from 'prop-types';
 
 const containerStyle = {
   display: "flex",
@@ -11,6 +12,17 @@ const starContainerStyle = {
   gap: "4px",
 };
 
+App_star.propTypes = {
+  // maxRating: PropTypes.number.isRequired,  // you can make it required
+  maxRating: PropTypes.number,
+  color: PropTypes.string,
+  size: PropTypes.number,
+  message: PropTypes.array,
+  defaultRating: PropTypes.number,
+  className: PropTypes.string,
+  onSetRating: PropTypes.func,
+}
+
 function App_star({
   maxRating = 5,
   color = "#ff6a00",
@@ -18,7 +30,7 @@ function App_star({
   className = "",
   message = [],
   defaultRating = 0,
-  onSetRating
+  onSetRating,
 }) {
   const [rating, setRating] = useState(defaultRating);
   const [tempRating, setTempRating] = useState(0);
@@ -32,8 +44,9 @@ function App_star({
   };
 
   function handleRating(rating) {
+    onSetRating(rating);
     setRating(rating);
-    onSetRating(rating);  //for external use 
+    //for external use
   }
 
   return (
