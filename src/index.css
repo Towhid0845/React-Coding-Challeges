@@ -199,3 +199,18 @@ div.selected {
 }
 
 /* flashcard css end  */
+
+
+/* show hide css */
+.box {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  background-color: #f7f7f7;
+}
+.mb-5{
+  margin-bottom: 50px;
+}
+.m-5{
+  margin: 50px;
+}
